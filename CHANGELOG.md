@@ -7,7 +7,7 @@ This project mostly adheres to [Semantic Versioning](https://semver.org/spec/v2.
 however, insignificant breaking changes do not guarantee a major version bump, see the reasoning [here](https://github.com/kyb3r/modmail/issues/319). If you're a plugins developer, note the "BREAKING" section.
 
 
-# v3.5.1-dev1
+# v3.5.1-dev2
 
 DONT UPDATE TO THIS VERSION YET UNLESS YOU KNOW WHAT YOU'RE DOING.
 
@@ -26,8 +26,10 @@ IRREVERSIBLE DATABASE CHANGES FOR MONGODB.
 ### Changed
 
 - A reworked interface for MongoDB database format, removed lists and embed types in favour of separate collections (need tests).
-  - To improve the success of migration, it's recommended for your MongoDB user to have Atlas Admin perms.
-    - If your migration fails due to timeout (happens without admin), you can set `FORCE_MIGRATE=TRUE` in the envs.
+  - ~~To improve the success of migration, it's recommended for your MongoDB user to have Atlas Admin perms.~~
+    ~~- If your migration fails due to timeout (happens without admin), you can set `FORCE_MIGRATE=TRUE` in the envs.~~
+  - Due to the majority of databases resides in Altas free plan, `FORCE_MIGRATE` will default to true. If you're on M10+ you can set `FORCE_MIGRATE` to false to migrate safely.
+    - It is recommended to make a backup before upgrading to this version.
   - This increase compatibility with SQL database types.
 - Removed `bot.plugin_db.get_partition`, to get a database client use (async) `bot.api.get_plugin_client`.
   - All existing plugins using the old api needs to be updated. Plugins that required a database partition will break after this update.

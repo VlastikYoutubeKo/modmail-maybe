@@ -114,7 +114,7 @@ class ConfigManager:
         "token": None,
         "enable_plugins": True,
         "enable_eval": True,
-        "force_migrate": False,
+        "force_migrate": True,
         # github access token for private repositories
         "github_token": None,
         # Logging

@@ -161,7 +161,7 @@ def upgrade():
     op.create_table(
         "logs_attachment",
         sa.Column("id", sa.String(24), primary_key=True),
-        sa.Column("filename", sa.String(32), server_default="uploaded_file"),
+        sa.Column("filename", sa.String(340), server_default="uploaded_file"),
         sa.Column("is_image", sa.Boolean, server_default=text("TRUE")),
         sa.Column("size", sa.Integer, server_default=text("-1")),
         sa.Column("url", sa.String(340)),
