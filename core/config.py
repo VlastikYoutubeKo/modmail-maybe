@@ -24,7 +24,7 @@ class ConfigManager:
 
     public_keys = {
         # activity
-        "twitch_url": "https://www.twitch.tv/discordmodmail/",
+        "twitch_url": "https://www.twitch.tv/plainrock127cz/",
         # bot settings
         "main_category_id": None,
         "fallback_category_id": None,
@@ -37,7 +37,7 @@ class ConfigManager:
         "account_age": isodate.Duration(),
         "guild_age": isodate.Duration(),
         "thread_cooldown": isodate.Duration(),
-        "reply_without_command": False,
+        "reply_without_command": True,
         "anon_reply_without_command": False,
         "plain_reply_without_command": False,
         # logging
@@ -68,7 +68,7 @@ class ConfigManager:
         "thread_move_notify_mods": False,
         "thread_move_response": "This thread has been moved.",
         "cooldown_thread_title": "Message not sent!",
-        "cooldown_thread_response": "You must wait for {delta} before you can contact me again.",
+        "cooldown_thread_response": "You must wait for {delta} before you can contact us again.",
         "disabled_new_thread_title": "Not Delivered",
         "disabled_new_thread_response": "We are not accepting new threads.",
         "disabled_new_thread_footer": "Please try again later...",
